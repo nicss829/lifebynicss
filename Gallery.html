@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | lifebynicss</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+  <div class="overlay">
+
+    <!-- NAVIGATION -->
+    <nav id="navbar">
+      <div class="nav-container">
+        <a class="logo" href="Main.html">lifebynicss</a>
+        <ul>
+          <li><a href="Main.html">Home</a></li>
+          <li><a href="Gallery.html" class="active">Gallery</a></li>
+          <li><a href="Video.html">Video</a></li>
+          <li><a href="Author.html">About</a></li>
+          <li><a href="Main.html#contact">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="Main.html">Home</a>
+      <a href="Gallery.html">Gallery</a>
+      <a href="Video.html">Video</a>
+      <a href="Author.html">About</a>
+      <a href="Main.html#contact">Contact</a>
+    </div>
+
+    <!-- GALLERY CONTENT -->
+    <section class="gallery-header">
+      <div class="section-title fade-in">
+        <h2>Photography Gallery</h2>
+        <p>Explore Portrait, Nature, and Landscape collections.</p>
+        <div class="title-line"></div>
+      </div>
+
+      <!-- PORTRAIT -->
+      <h3 class="sub-title fade-in">Portrait Photography</h3>
+      <div class="photo-gallery">
+        <div class="photo-box fade-in" onclick="openLightbox(0)">
+          <img src="Images/Child.jpg" alt="Child">
+          <h3>Source of Happiness</h3>
+        </div>
+        <div class="photo-box fade-in fade-delay-1" onclick="openLightbox(1)">
+          <img src="Images/Flowers.jpg" alt="Flowers">
+          <h3>Beauty in Bloom</h3>
+        </div>
+        <div class="photo-box fade-in fade-delay-2" onclick="openLightbox(2)">
+          <img src="Images/Dandan.jpg" alt="Dandan">
+          <h3>Captured Emotion</h3>
+        </div>
+        <div class="photo-box fade-in fade-delay-3" onclick="openLightbox(10)">
+          <img src="Images/EK.jpg" alt="EK">
+          <h3>Moments Together</h3>
+        </div>
+        <div class="photo-box fade-in" onclick="openLightbox(11)">
+          <img src="Images/Friends.jpg" alt="Friends">
+          <h3>Shared Laughter</h3>
+        </div>
+        <div class="photo-box fade-in fade-delay-1" onclick="openLightbox(12)">
+          <img src="Images/Watch.jpg" alt="Watch">
+          <h3>Timeless</h3>
+        </div>
+      </div>
+
+      <!-- NATURE -->
+      <h3 class="sub-title fade-in">Nature Photography</h3>
+      <div class="photo-gallery">
+        <div class="photo-box fade-in" onclick="openLightbox(3)">
+          <img src="Images/Small flower.jpg" alt="Flower">
+          <h3>The Beauty of Light</h3>
+        </div>
+        <div class="photo-box fade-in fade-delay-1" onclick="openLightbox(4)">
+          <img src="Images/Sunset.jpg" alt="Sunset">
+          <h3>Golden Hour Magic</h3>
+        </div>
+        <div class="photo-box fade-in fade-delay-2" onclick="openLightbox(5)">
+          <img src="Images/Autumn.jpg" alt="Autumn">
+          <h3>All Will Be Alright</h3>
+        </div>
+        <div class="photo-box fade-in fade-delay-3" onclick="openLightbox(13)">
+          <img src="Images/Bloom.jpg" alt="Bloom">
+          <h3>First Bloom</h3>
+        </div>
+        <div class="photo-box fade-in" onclick="openLightbox(14)">
+          <img src="Images/Earth.jpg" alt="Earth">
+          <h3>Rooted</h3>
+        </div>
+      </div>
+
+      <!-- LANDSCAPE -->
+      <h3 class="sub-title fade-in">Landscape Photography</h3>
+      <div class="photo-gallery">
+        <div class="photo-box fade-in" onclick="openLightbox(6)">
+          <img src="Images/Stick.jpg" alt="Stick">
+          <h3>The Little Man in the Dark</h3>
+        </div>
+        <div class="photo-box fade-in fade-delay-1" onclick="openLightbox(7)">
+          <img src="Images/Lights.jpg" alt="Lights">
+          <h3>Glow</h3>
+        </div>
+        <div class="photo-box fade-in fade-delay-2" onclick="openLightbox(8)">
+          <img src="Images/Grass.jpg" alt="Grass">
+          <h3>See It Beyond</h3>
+        </div>
+        <div class="photo-box fade-in fade-delay-3" onclick="openLightbox(9)">
+          <img src="Images/Kid.jpg" alt="Kid">
+          <h3>Innocent Wonder</h3>
+        </div>
+        <div class="photo-box fade-in" onclick="openLightbox(15)">
+          <img src="Images/Clouds.jpg" alt="Clouds">
+          <h3>Above It All</h3>
+        </div>
+        <div class="photo-box fade-in fade-delay-1" onclick="openLightbox(16)">
+          <img src="Images/Sea.jpg" alt="Sea">
+          <h3>Endless Horizon</h3>
+        </div>
+        <div class="photo-box fade-in fade-delay-2" onclick="openLightbox(17)">
+          <img src="Images/Moon.jpg" alt="Moon">
+          <h3>Quiet Night</h3>
+        </div>
+        <div class="photo-box fade-in fade-delay-3" onclick="openLightbox(18)">
+          <img src="Images/Line.jpg" alt="Line">
+          <h3>Parallel Paths</h3>
+        </div>
+      </div>
+
+      <div style="text-align:center;">
+        <a href="Main.html" class="back-button">← Back to Home</a>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 <span>lifebynicss</span> | Photography Portfolio &nbsp;·&nbsp; All rights reserved.
+    </footer>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <button class="lightbox-prev" onclick="changePhoto(-1)">&#8249;</button>
+    <button class="lightbox-next" onclick="changePhoto(1)">&#8250;</button>
+    <div class="lightbox-inner">
+      <img id="lightbox-img" src="" alt="">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <script>
+    const photos = [
+      { src: 'Images/Child.jpg', caption: 'Source of Happiness' },
+      { src: 'Images/Flowers.jpg', caption: 'Beauty in Bloom' },
+      { src: 'Images/Dandan.jpg', caption: 'Captured Emotion' },
+      { src: 'Images/Small flower.jpg', caption: 'The Beauty of Light' },
+      { src: 'Images/Sunset.jpg', caption: 'Golden Hour Magic' },
+      { src: 'Images/Autumn.jpg', caption: 'All Will Be Alright' },
+      { src: 'Images/Stick.jpg', caption: 'The Little Man in the Dark' },
+      { src: 'Images/Lights.jpg', caption: 'Glow' },
+      { src: 'Images/Grass.jpg', caption: 'See It Beyond' },
+      { src: 'Images/Kid.jpg', caption: 'Innocent Wonder' },
+      { src: 'Images/EK.jpg', caption: 'Moments Together' },
+      { src: 'Images/Friends.jpg', caption: 'Shared Laughter' },
+      { src: 'Images/Watch.jpg', caption: 'Timeless' },
+      { src: 'Images/Bloom.jpg', caption: 'First Bloom' },
+      { src: 'Images/Earth.jpg', caption: 'Rooted' },
+      { src: 'Images/Clouds.jpg', caption: 'Above It All' },
+      { src: 'Images/Sea.jpg', caption: 'Endless Horizon' },
+      { src: 'Images/Moon.jpg', caption: 'Quiet Night' },
+      { src: 'Images/Line.jpg', caption: 'Parallel Paths' },
+    ];
+
+    let current = 0;
+
+    function openLightbox(index) {
+      current = index;
+      updateLightbox();
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function changePhoto(dir) {
+      current = (current + dir + photos.length) % photos.length;
+      updateLightbox();
+    }
+
+    function updateLightbox() {
+      document.getElementById('lightbox-img').src = photos[current].src;
+      document.getElementById('lightbox-caption').textContent = photos[current].caption;
+    }
+
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === this) closeLightbox();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (!document.getElementById('lightbox').classList.contains('active')) return;
+      if (e.key === 'ArrowRight') changePhoto(1);
+      if (e.key === 'ArrowLeft') changePhoto(-1);
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    // Nav scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+
+    // Fade-in
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | lifebynicss</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+  <div class="overlay">
+
+    <!-- NAVIGATION -->
+    <nav id="navbar">
+      <div class="nav-container">
+        <a class="logo" href="Main.html">lifebynicss</a>
+        <ul>
+          <li><a href="Main.html">Home</a></li>
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a href="Video.html">Video</a></li>
+          <li><a href="Author.html" class="active">About</a></li>
+          <li><a href="Main.html#contact">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="Main.html">Home</a>
+      <a href="Gallery.html">Gallery</a>
+      <a href="Video.html">Video</a>
+      <a href="Author.html">About</a>
+      <a href="Main.html#contact">Contact</a>
+    </div>
+
+    <!-- ABOUT -->
+    <section style="padding-top: 100px; padding-bottom: 80px;">
+      <div class="container about-container fade-in">
+        <h1>About the Photographer</h1>
+        <div class="divider"></div>
+
+        <p class="description">
+          Photography, for me, is more than just capturing images.
+          It is my way of telling stories through emotions, colors,
+          and moments that often go unnoticed.
+          <br><br>
+          Through every photograph and video, I aim to preserve memories
+          and create visual stories that inspire people to appreciate
+          the beauty hidden in everyday life.
+          <br><br>
+          Every frame reflects passion, creativity, and a deep love for
+          life's little details.
+        </p>
+
+        <img src="Images/Photographer.jpg" alt="Photographer Portrait" class="profile-img">
+
+        <div class="quote">"Stay in love with life's little details."</div>
+        <div class="name">Princess Nicole O. Lado</div>
+
+        <div class="divider"></div>
+
+        <a href="Main.html" class="back-button">← Back to Home</a>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 <span>lifebynicss</span> | Photography Portfolio &nbsp;·&nbsp; All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
