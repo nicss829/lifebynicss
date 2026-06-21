@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video | lifebynicss</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+  <div class="overlay">
+
+    <!-- NAVIGATION -->
+    <nav id="navbar">
+      <div class="nav-container">
+        <a class="logo" href="index.html">lifebynicss</a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a href="Video.html" class="active">Video</a></li>
+          <li><a href="Author.html">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="Gallery.html">Gallery</a>
+      <a href="Video.html">Video</a>
+      <a href="Author.html">About</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+
+    <!-- VIDEO -->
+    <section class="video-section">
+      <div class="section-title fade-in">
+        <h2>Cinematic Video Showcase</h2>
+        <p>Moving visuals that bring stories to life.</p>
+        <div class="title-line"></div>
+      </div>
+
+      <div class="video-container fade-in">
+        <video id="video1" controls poster="Images/Sunset.jpg">
+          <source src="Video/Sky.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p class="video-info fade-in">A cinematic short — capturing the quiet beauty of the sky and the stories it tells at different hours of the day.</p>
+
+      <div class="video-container fade-in" style="margin-top: 70px;">
+        <video id="video2" controls poster="Images/Sea.jpg">
+          <source src="Video/Ocean.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p class="video-info fade-in">Where the water meets the horizon — the ocean in all its quiet, endless beauty.</p>
+
+      <div style="text-align:center; margin-top: 40px;">
+        <a href="index.html" class="back-button">← Back to Home</a>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 <span>lifebynicss</span> | Photography Portfolio &nbsp;·&nbsp; All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Background music — plays softly when a video is playing
+    const bgMusic = new Audio('audio/Corinne Rae.mp3');
+    bgMusic.loop = true;
+    bgMusic.volume = 0.22;
+
+    const videos = [document.getElementById('video1'), document.getElementById('video2')];
+    videos.forEach(vid => {
+      vid.addEventListener('play', () => bgMusic.play().catch(() => {}));
+      vid.addEventListener('pause', () => bgMusic.pause());
+      vid.addEventListener('ended', () => { bgMusic.pause(); bgMusic.currentTime = 0; });
+    });
+  </script>
+</body>
+</html>

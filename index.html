@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lifebynicss | Photography Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+  <div class="overlay">
+
+    <!-- NAVIGATION -->
+    <nav id="navbar">
+      <div class="nav-container">
+        <a class="logo" href="index.html">lifebynicss</a>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a href="Video.html">Video</a></li>
+          <li><a href="Author.html">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="Gallery.html">Gallery</a>
+      <a href="Video.html">Video</a>
+      <a href="Author.html">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1 class="fade-in">lifebynicss</h1>
+        <p class="fade-in fade-delay-1">Capturing emotions, stories, and little moments through timeless photography and cinematic visuals.</p>
+        <div class="quote fade-in fade-delay-2">"Stay in love with life's little details."</div>
+        <div class="hero-button fade-in fade-delay-3">
+          <a href="Gallery.html" class="btn-primary">Explore Gallery</a>
+          <a href="#contact" class="btn-outline">Get in Touch</a>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="arrow"></div>
+      </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+      <div class="stat-item fade-in">
+        <div class="stat-num">19+</div>
+        <div class="stat-label">Photos</div>
+      </div>
+      <div class="stat-item fade-in fade-delay-1">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Collections</div>
+      </div>
+      <div class="stat-item fade-in fade-delay-2">
+        <div class="stat-num">2</div>
+        <div class="stat-label">Cinematic Films</div>
+      </div>
+    </div>
+
+    <!-- FEATURED WORKS -->
+    <section class="featured-section">
+      <div class="section-title fade-in">
+        <h2>Featured Works</h2>
+        <p>A glimpse into the world through my lens.</p>
+        <div class="title-line"></div>
+      </div>
+
+      <div class="featured-grid">
+        <div class="featured-card fade-in">
+          <img src="Images/Sunset.jpg" alt="Golden Hour">
+          <div class="featured-card-overlay"><span>Golden Hour Magic</span></div>
+        </div>
+        <div class="featured-card fade-in fade-delay-1">
+          <img src="Images/Child.jpg" alt="Child">
+          <div class="featured-card-overlay"><span>Source of Happiness</span></div>
+        </div>
+        <div class="featured-card fade-in fade-delay-2">
+          <img src="Images/Lights.jpg" alt="Glow">
+          <div class="featured-card-overlay"><span>Glow</span></div>
+        </div>
+        <div class="featured-card fade-in fade-delay-3">
+          <img src="Images/Autumn.jpg" alt="Autumn">
+          <div class="featured-card-overlay"><span>All Will Be Alright</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BROWSE BY CATEGORY -->
+    <section>
+      <div class="section-title fade-in">
+        <h2>Browse by Category</h2>
+        <p>Portrait, Nature, and Landscape — each with its own story.</p>
+        <div class="title-line"></div>
+      </div>
+
+      <div class="category-grid">
+        <a href="Gallery.html" class="category-card fade-in">
+          <img src="Images/Dandan.jpg" alt="Portrait">
+          <div class="card-overlay">
+            <p>Collection</p>
+            <h3>Portrait</h3>
+            <span class="card-arrow">→</span>
+          </div>
+        </a>
+        <a href="Gallery.html" class="category-card fade-in fade-delay-1">
+          <img src="Images/Flowers.jpg" alt="Nature">
+          <div class="card-overlay">
+            <p>Collection</p>
+            <h3>Nature</h3>
+            <span class="card-arrow">→</span>
+          </div>
+        </a>
+        <a href="Gallery.html" class="category-card fade-in fade-delay-2">
+          <img src="Images/Stick.jpg" alt="Landscape">
+          <div class="card-overlay">
+            <p>Collection</p>
+            <h3>Landscape</h3>
+            <span class="card-arrow">→</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-title fade-in">
+        <h2>Contact Me</h2>
+        <p>Let's collaborate and create meaningful visual stories.</p>
+        <div class="title-line"></div>
+      </div>
+      <div class="contact-box fade-in">
+        <p>If you'd like to collaborate, ask questions, or simply share your thoughts — feel free to reach out. I'd love to hear from you.</p>
+        <div class="contact-links">
+          <a href="mailto:ladoprincessnicole@gmail.com">✉ ladoprincessnicole@gmail.com</a>
+          <a href="https://www.instagram.com/lifebynicss" target="_blank">📷 @lifebynicss</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 <span>lifebynicss</span> | Photography Portfolio &nbsp;·&nbsp; All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
+    });
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
